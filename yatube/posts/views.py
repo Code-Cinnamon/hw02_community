@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Group
 
+POST_PER_PAGE: int = 10
+
 
 def index(request):
     posts = Post.objects.all()[:POSTS_PER_PAGE]
